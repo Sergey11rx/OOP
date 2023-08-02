@@ -38,17 +38,17 @@ public class View {
 
     public void start() {
         while (true) {
-            System.out.print("Enter first number: ");
+            System.out.print("Введите первый номер: ");
             double num1 = scanner.nextDouble();
-            System.out.print("Enter operator (+, -, *, /): ");
+            System.out.print("Введите оператор (+, -, *, /): ");
             String operator = scanner.next();
-            System.out.print("Enter second number: ");
+            System.out.print("Введите второй номер: ");
             double num2 = scanner.nextDouble();
 
             double result = presenter.calculate(num1, num2, operator);
-            System.out.println("Result: " + result);
+            System.out.println("Результат: " + result);
 
-            System.out.print("Do you want to continue? (y/n): ");
+            System.out.print("Вы хотите продолжить? (да/нет): ");
             String choice = scanner.next();
             if (!choice.equalsIgnoreCase("y")) {
                 break;
@@ -57,12 +57,12 @@ public class View {
     }
 
     public String getOperatorInput() {
-        System.out.print("Enter operator (+, -, *, /): ");
+        System.out.print("Введите оператор (+, -, *, /): ");
         return scanner.next();
     }
 
     public double getNumberInput() {
-        System.out.print("Enter a number: ");
+        System.out.print("Введите номер: ");
         return scanner.nextDouble();
     }
 }
